@@ -291,4 +291,4 @@ New commands should be added to the `commands/` directory and registered in the 
 
 # License
 
-Internal Modcafe tooling.
+Internal Modcafe tooling. MIT.
