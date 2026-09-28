@@ -60,37 +60,15 @@ npm --version
 
 ---
 
-## 2. Clone Milkbucket
+## 2. Install Milkbucket
 
-Clone the repository and enter its directory:
-
-```bash
-git clone https://github.com/Modcafe/milkbucket.git
-cd milkbucket
-```
-
-Then link Milkbucket as a global CLI:
+Install Milkbucket globally from npm:
 
 ```bash
-npm link
+npm install -g @modcafe/milkbucket
 ```
 
-### If `npm link` fails
-
-If npm does not have permission to create the global link, configure a user-local npm directory:
-
-```bash
-mkdir -p ~/.npm-global
-npm config set prefix ~/.npm-global
-echo 'export PATH="$HOME/.npm-global/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-Then run:
-
-```bash
-npm link
-```
+Once installed, the `milkbucket` command is available globally.
 
 ---
 
@@ -148,7 +126,7 @@ milkbucket --version
 
 ---
 
-## `info` (comming soon)
+## `info` (coming soon)
 
 Displays information about the current project and environment.
 
@@ -158,7 +136,7 @@ milkbucket info
 
 ---
 
-## `project` (comming soon)
+## `project` (coming soon)
 
 Tools for inspecting and working with the current Minecraft project.
 
@@ -166,7 +144,7 @@ Tools for inspecting and working with the current Minecraft project.
 milkbucket project
 ```
 
-### `project detect` (comming soon)
+### `project detect` (coming soon)
 
 Detects the type and configuration of the current project.
 
@@ -174,7 +152,7 @@ Detects the type and configuration of the current project.
 milkbucket project detect
 ```
 
-### `project validate` (comming soon)
+### `project validate` (coming soon)
 
 Checks the current project for common configuration problems.
 
@@ -184,7 +162,7 @@ milkbucket project validate
 
 ---
 
-## `build` (comming soon)
+## `build` (coming soon)
 
 Builds the current Minecraft project.
 
@@ -194,7 +172,7 @@ milkbucket build
 
 ---
 
-## `deps` (comming soon)
+## `deps` (coming soon)
 
 Tools for inspecting project dependencies.
 
@@ -202,7 +180,7 @@ Tools for inspecting project dependencies.
 milkbucket deps
 ```
 
-### `deps list` (comming soon)
+### `deps list` (coming soon)
 
 Lists the dependencies of the current project.
 
@@ -210,7 +188,7 @@ Lists the dependencies of the current project.
 milkbucket deps list
 ```
 
-### `deps check` (comming soon)
+### `deps check` (coming soon)
 
 Checks whether the project's dependencies are valid.
 
@@ -220,7 +198,7 @@ milkbucket deps check
 
 ---
 
-## `logs` (comming soon)
+## `logs` (coming soon)
 
 Tools for working with Minecraft logs.
 
@@ -228,7 +206,7 @@ Tools for working with Minecraft logs.
 milkbucket logs
 ```
 
-### `logs latest` (comming soon)
+### `logs latest` (coming soon)
 
 Displays or analyzes the latest log.
 
@@ -238,7 +216,7 @@ milkbucket logs latest
 
 ---
 
-## `crash` (comming soon)
+## `crash` (coming soon)
 
 Analyzes the latest Minecraft crash report.
 
@@ -248,7 +226,7 @@ milkbucket crash
 
 ---
 
-## `team` (comming soon)
+## `team` (coming soon)
 
 Tools for Modcafe development teams.
 
@@ -256,7 +234,7 @@ Tools for Modcafe development teams.
 milkbucket team
 ```
 
-### `team doctor` (comming soon)
+### `team doctor` (coming soon)
 
 Checks the local development environment.
 
@@ -268,16 +246,23 @@ milkbucket team doctor
 
 # Updating
 
-To update your local Milkbucket installation, pull the latest changes from GitHub:
+Update Milkbucket directly through npm:
 
 ```bash
-cd milkbucket
-git pull
-npm link
+npm update -g @modcafe/milkbucket
 ```
 
-> [!TIP]
-> You only need to configure the npm prefix once. After that, updating Milkbucket only requires `git pull` and `npm link`.
+To install the latest version regardless of the currently installed version:
+
+```bash
+npm install -g @modcafe/milkbucket@latest
+```
+
+You can verify the installed version afterwards:
+
+```bash
+milkbucket --version
+```
 
 ---
 
@@ -296,7 +281,7 @@ milkbucket/
 │   ├── version.js
 │   └── ...
 └── lib/
-    ├── commandInfo.json
+    ├── commandInfo.js
     └── ...
 ```
 
