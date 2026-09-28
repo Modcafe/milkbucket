@@ -6,6 +6,9 @@
     "bin": {
         "milkbucket": "./cli.js"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "engines": {
         "node": ">=20"
     },
