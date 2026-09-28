@@ -1,6 +1,6 @@
 {
     "name": "@modcafe/milkbucket",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Internal CLI tool by Modcafe for developing, testing and debugging Minecraft mods and datapacks.",
     "type": "module",
     "bin": {
