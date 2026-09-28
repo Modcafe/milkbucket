@@ -1,7 +1,8 @@
 import { getCommandVersionText, getCommandHelpText } from "../lib/commandInfo.js";
-import packageJson from "../package.json" with { type: "json" };
+//import packageJson from "../package.json" with { type: "json" };
 import metadata from "../metadata.json" with { type: "json" };
 import commandMetadata from "../commandMetadata.json" with { type: "json" };
+import optionMetadata from "../optionMetadata.json" with { type: "json" };
 
 export default function help(args) {
     switch (args[0]) {
@@ -23,6 +24,15 @@ export default function help(args) {
 
                 commandsText += `                    ${commandName.padEnd(24)}${info.description}\n`
             }
+
+            let optionsText = "";
+
+            for (const [optionName, info] of Object.entries(optionMetadata)) {
+                if (optionName.startsWith("_")) continue;
+                const optionNameWithAlias = `${optionName}, ${info.aliases[0]}`;
+                optionsText += `                    ${optionNameWithAlias.padEnd(24)}${info.description}\n`
+            }
+
             console.log(`
                 Usage: ${metadata.name} [command] <args> <options>
             
@@ -30,8 +40,7 @@ export default function help(args) {
 ${commandsText}
                 
                 Options:
-                    -v, --version           Show the version a feature got updated lastest
-                    -h, --help              Show a list of Arguments and helps
+${optionsText}
                 `);        
     }
 };
