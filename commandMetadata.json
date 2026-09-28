@@ -1,0 +1,27 @@
+{
+    "_TEMPLATE_FOR_COMMANDS": {
+        "lastUpdated": "1.0.0",
+        "firstAdded": "1.0.0",
+        "contributors": ["ContributorA", "ContributorB"],
+        "description": "This is a Command Description.",
+        "aliases": ["--template", "-t"],
+        "args": "[arg1|arg2] <arg3|arg4|arg5>"
+    },
+
+
+
+    "help": {
+        "lastUpdated": "1.0.0",
+        "firstAdded": "1.0.0",
+        "contributors": ["Intensed"],
+        "description": "Shows a list of all Commands and Options.",
+        "aliases": ["--help", "-h"]
+    },
+    "version": {
+        "lastUpdated": "1.0.0",
+        "firstAdded": "1.0.0",
+        "contributors": ["Intensed"],
+        "description": "Show which version of milkbucket you have installed",
+        "aliases": ["--version", "-v"]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "milkbucket",
+    "version": "1.0.0",
+    "type": "module",
+    "bin": {
+        "milkbucket": "./cli.js"
+    }
+}

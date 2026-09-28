@@ -1,0 +1,13 @@
+{
+    "displayName": "Milkbucket",
+    "name": "milkbucket",
+    "description": "Milkbucket is a internal CLI-Tool developed from and for Modcafe and their Members, to test, debug and tool code.",
+    "commands": {
+        "help": "--help",
+        "version": "--version"
+    },
+    "options": {
+        "help": "-h",
+        "version": "-v"
+    }
+}
