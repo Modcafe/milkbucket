@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
+          package-manager-cache: false
 
       - name: Generate package-lock.json
         run: npm install --package-lock-only
@@ -43,8 +44,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://npm.pkg.github.com
+          package-manager-cache: false
 
       - name: Generate package-lock.json
         run: npm install --package-lock-only
