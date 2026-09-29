@@ -1,0 +1,20 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Milkbucket
+  structure:
+    - type: section
+      key: section-2
+      title: Documentation
+      path: docs
+      description: ""
+      icon: code
+      default: true
+      children:
+        - type: space
+          key: space-1
+          title: Documentation
+          path: product-docs
+          default: true
+          draft: true
+          content:
+            directory: null
