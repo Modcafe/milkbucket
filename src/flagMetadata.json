@@ -1,6 +1,6 @@
 {
-    "_TEMPLATE_FOR_OPTIONS": {
-        "description": "This is a Option Description.",
+    "_TEMPLATE_FOR_FLAGS": {
+        "description": "This is a Flag Description.",
         "aliases": ["--template", "-t"]
     },
 

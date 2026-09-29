@@ -2,7 +2,7 @@ import { getCommandVersionText, getCommandHelpText } from "../lib/commandInfo.js
 //import packageJson from "../package.json" with { type: "json" };
 import metadata from "../metadata.json" with { type: "json" };
 import commandMetadata from "../commandMetadata.json" with { type: "json" };
-import optionMetadata from "../optionMetadata.json" with { type: "json" };
+import flagMetadata from "../flagMetadata.json" with { type: "json" };
 
 export default function help(args) {
     switch (args[0]) {
@@ -25,22 +25,22 @@ export default function help(args) {
                 commandsText += `                    ${commandName.padEnd(24)}${info.description}\n`
             }
 
-            let optionsText = "";
+            let flagText = "";
 
-            for (const [optionName, info] of Object.entries(optionMetadata)) {
-                if (optionName.startsWith("_")) continue;
-                const optionNameWithAlias = `${optionName}, ${info.aliases[0]}`;
-                optionsText += `                    ${optionNameWithAlias.padEnd(24)}${info.description}\n`
+            for (const [flagName, info] of Object.entries(flagMetadata)) {
+                if (flagName.startsWith("_")) continue;
+                const flagNameWithAlias = `${flagName}, ${info.aliases[0]}`;
+                flagText += `                    ${flagNameWithAlias.padEnd(24)}${info.description}\n`
             }
 
             console.log(`
-                Usage: ${metadata.name} [command] <args> <options>
+                Usage: ${metadata.name} [command] <args> <flags>
             
                 Commands:
 ${commandsText}
                 
-                Options:
-${optionsText}
+                Flags:
+${flagText}
                 `);        
     }
 };
