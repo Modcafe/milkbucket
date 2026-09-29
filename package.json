@@ -1,14 +1,17 @@
 {
     "name": "@modcafe/milkbucket",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Internal CLI tool by Modcafe for developing, testing and debugging Minecraft mods and datapacks.",
     "type": "module",
     "bin": {
-        "milkbucket": "./cli.js"
+        "milkbucket": "./src/cli.js"
     },
     "publishConfig": {
         "access": "public"
     },
+    "files": [
+        "src"
+    ],
     "engines": {
         "node": ">=20"
     },
