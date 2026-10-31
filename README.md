@@ -12,46 +12,18 @@ It is built with **Node.js** and **JavaScript**.
 
 Milkbucket requires **Node.js** and **npm**.
 
-### macOS
+| Operating System | Package Manager | Installation Command |
+|---|---|---|
+| Windows | winget | `winget install OpenJS.NodeJS` |
+| macOS | Homebrew | `brew install node` |
+| macOS | NVM | `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh \| bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install --lts` |
+| Debian / Ubuntu | APT | `sudo apt update && sudo apt install nodejs npm` |
+| Fedora | DNF | `sudo dnf5 install nodejs npm` |
+| Arch Linux | pacman | `sudo pacman -S nodejs npm` |
 
-Using Homebrew:
+### Verify the installation
 
-```bash
-brew install node
-```
-
-Verify the installation:
-
-```bash
-node --version
-npm --version
-```
-
-### Windows
-
-Using `winget`:
-
-```powershell
-winget install OpenJS.NodeJS
-```
-
-Verify the installation:
-
-```powershell
-node --version
-npm --version
-```
-
-### Linux
-
-On Debian/Ubuntu-based distributions:
-
-```bash
-sudo apt update
-sudo apt install nodejs npm
-```
-
-Verify the installation:
+Run these commands to verify that Node.js and npm are installed:
 
 ```bash
 node --version
